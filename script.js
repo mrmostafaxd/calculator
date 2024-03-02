@@ -14,6 +14,7 @@ let operand2 = null;
 
 let whichOperand = 1;
 let canRewrite = false;
+let calcWorking = true;
 
 let op = null;
 
@@ -28,10 +29,18 @@ btnContainer.addEventListener('click', handleCalcClicks);
 
 // functions
 function handleCalcClicks(evt) {
+  if (isNaN(+currentValue) || currentValue.includes('Inf')) {
+    calcWorking = false;
+  }
+
   const clicked = evt.target;
   if (clicked.dataset.type === 'cls') {
     handleAc();
   }
+  if (!calcWorking) {
+    return;
+  }
+
   if (clicked.dataset.type === 'del') {
     handleDel();
   }
@@ -60,6 +69,7 @@ function handleAc() {
   dotActive = false;
   whichOperand = 1;
   canRewrite = false;
+  calcWorking = true;
 
   clearCurrentValue();
   displayValue();
@@ -141,13 +151,14 @@ function handleEqual() {
         result = divide(operand1, operand2);
         break;
     }
-    currentValue = result.toString();
-    displayValue('calc');
 
     operand1 = null;
     operand2 = null;
     op = null;
     canRewrite = true;
+
+    currentValue = result.toString();
+    displayValue('calc');
   }
 }
 
