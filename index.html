@@ -6,8 +6,48 @@
     <title>Calculator</title>
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="./styles.css" />
+    <!-- fonts -->
+    <link
+      href="https://fonts.cdnfonts.com/css/seven-segment"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <div id="main">
+      <div id="calculator">
+        <div id="screen-container">
+          <div id="display">00000000000000</div>
+        </div>
+        <div id="button-container">
+          <button class="op-btn">AC</button>
+          <button class="op-btn">DEL</button>
+          <button class="op-btn">&#43;&#47;&minus;</button>
+          <button class="op-btn">&divide;</button>
+          <button class="num-btn">7</button>
+          <button class="num-btn">8</button>
+          <button class="num-btn">9</button>
+          <button class="op-btn">&times;</button>
+          <button class="num-btn">4</button>
+          <button class="num-btn">5</button>
+          <button class="num-btn">6</button>
+          <button class="op-btn">&minus;</button>
+          <button class="num-btn">1</button>
+          <button class="num-btn">2</button>
+          <button class="num-btn">3</button>
+          <button class="op-btn">&#43;</button>
+          <button class="num-btn grow">0</button>
+          <button class="num-btn">.</button>
+          <button class="op-btn">&equals;</button>
+        </div>
+      </div>
+    </div>
     <script src="./script.js"></script>
   </body>
 </html>
