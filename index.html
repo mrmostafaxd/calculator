@@ -23,28 +23,30 @@
     <div id="main">
       <div id="calculator">
         <div id="screen-container">
-          <div id="display">00000000000000</div>
+          <div id="display">0</div>
         </div>
         <div id="button-container">
-          <button class="op-btn">AC</button>
-          <button class="op-btn">DEL</button>
-          <button class="op-btn">&#43;&#47;&minus;</button>
-          <button class="op-btn">&divide;</button>
-          <button class="num-btn">7</button>
-          <button class="num-btn">8</button>
-          <button class="num-btn">9</button>
-          <button class="op-btn">&times;</button>
-          <button class="num-btn">4</button>
-          <button class="num-btn">5</button>
-          <button class="num-btn">6</button>
-          <button class="op-btn">&minus;</button>
-          <button class="num-btn">1</button>
-          <button class="num-btn">2</button>
-          <button class="num-btn">3</button>
-          <button class="op-btn">&#43;</button>
-          <button class="num-btn grow">0</button>
-          <button class="num-btn">.</button>
-          <button class="op-btn">&equals;</button>
+          <button class="op-btn" data-type="cls">AC</button>
+          <button class="op-btn" data-type="del">DEL</button>
+          <button class="op-btn" data-type="neg">&#43;&#47;&minus;</button>
+          <button class="op-btn" data-type="op" data-value="/" disabled>
+            &divide;
+          </button>
+          <button class="num-btn" data-type="num" data-value="7">7</button>
+          <button class="num-btn" data-type="num" data-value="8">8</button>
+          <button class="num-btn" data-type="num" data-value="9">9</button>
+          <button class="op-btn" data-type="op" data-value="x">&times;</button>
+          <button class="num-btn" data-type="num" data-value="4">4</button>
+          <button class="num-btn" data-type="num" data-value="5">5</button>
+          <button class="num-btn" data-type="num" data-value="6">6</button>
+          <button class="op-btn" data-type="op" data-value="-">&minus;</button>
+          <button class="num-btn" data-type="num" data-value="1">1</button>
+          <button class="num-btn" data-type="num" data-value="2">2</button>
+          <button class="num-btn" data-type="num" data-value="3">3</button>
+          <button class="op-btn" data-type="op" data-value="+">&#43;</button>
+          <button class="num-btn grow" data-type="num" data-value="0">0</button>
+          <button class="num-btn" data-type="num" data-value=".">.</button>
+          <button class="op-btn" data-type="equal">&equals;</button>
         </div>
       </div>
     </div>
